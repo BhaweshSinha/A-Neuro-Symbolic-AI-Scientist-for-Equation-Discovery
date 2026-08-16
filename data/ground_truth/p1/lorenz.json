@@ -1,0 +1,29 @@
+{
+  "system": "lorenz",
+  "state_names": [
+    "x",
+    "y",
+    "z"
+  ],
+  "default_parameters": {
+    "sigma": 10.0,
+    "rho": 28.0,
+    "beta": 2.6666666666666665
+  },
+  "ground_truth_equations": [
+    "dx/dt = sigma*(y-x)",
+    "dy/dt = x*(rho-z)-y",
+    "dz/dt = x*y-beta*z"
+  ],
+  "generation": {
+    "trajectories": 10,
+    "duration": 20.0,
+    "dt": 0.01,
+    "solver": {
+      "method": "DOP853",
+      "rtol": 1e-09,
+      "atol": 1e-11
+    },
+    "seed": 42
+  }
+}

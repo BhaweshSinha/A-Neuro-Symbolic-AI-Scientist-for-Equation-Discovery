@@ -1,0 +1,33 @@
+{
+  "system": "double_pendulum",
+  "state_names": [
+    "theta1",
+    "omega1",
+    "theta2",
+    "omega2"
+  ],
+  "default_parameters": {
+    "m1": 1.0,
+    "m2": 1.0,
+    "L1": 1.0,
+    "L2": 1.0,
+    "g": 9.81
+  },
+  "ground_truth_equations": [
+    "dtheta1/dt = omega1",
+    "dtheta2/dt = omega2",
+    "domega1/dt = coupled nonlinear pendulum dynamics",
+    "domega2/dt = coupled nonlinear pendulum dynamics"
+  ],
+  "generation": {
+    "trajectories": 10,
+    "duration": 20.0,
+    "dt": 0.01,
+    "solver": {
+      "method": "DOP853",
+      "rtol": 1e-09,
+      "atol": 1e-11
+    },
+    "seed": 42
+  }
+}

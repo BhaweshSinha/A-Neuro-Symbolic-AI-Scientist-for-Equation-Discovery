@@ -1,0 +1,27 @@
+{
+  "system": "sis",
+  "state_names": [
+    "S",
+    "I"
+  ],
+  "default_parameters": {
+    "beta": 0.8,
+    "gamma": 0.3,
+    "N": 1.0
+  },
+  "ground_truth_equations": [
+    "dS/dt = -beta*S*I/N + gamma*I",
+    "dI/dt = beta*S*I/N - gamma*I"
+  ],
+  "generation": {
+    "trajectories": 10,
+    "duration": 20.0,
+    "dt": 0.01,
+    "solver": {
+      "method": "DOP853",
+      "rtol": 1e-09,
+      "atol": 1e-11
+    },
+    "seed": 42
+  }
+}

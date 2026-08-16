@@ -1,0 +1,33 @@
+{
+  "system": "two_body",
+  "state_names": [
+    "x1",
+    "y1",
+    "vx1",
+    "vy1",
+    "x2",
+    "y2",
+    "vx2",
+    "vy2"
+  ],
+  "default_parameters": {
+    "G": 1.0,
+    "m1": 1.0,
+    "m2": 1.0
+  },
+  "ground_truth_equations": [
+    "a1 = G*m2*(r2-r1)/|r2-r1|^3",
+    "a2 = -G*m1*(r2-r1)/|r2-r1|^3"
+  ],
+  "generation": {
+    "trajectories": 10,
+    "duration": 20.0,
+    "dt": 0.01,
+    "solver": {
+      "method": "DOP853",
+      "rtol": 1e-09,
+      "atol": 1e-11
+    },
+    "seed": 42
+  }
+}
