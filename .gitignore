@@ -38,9 +38,13 @@ Thumbs.db
 *.log
 
 # Generated data
-data/raw/
+data/raw/*
 data/interim/
 data/processed/
+
+# Allow DVC tracking files
+!data/raw/
+!data/raw/*.dvc
 
 # DVC cache
 .dvc/cache/
