@@ -1,0 +1,20 @@
+dataset: two_body
+
+window:
+  length: 128
+  stride: 32
+
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+  seed: 42
+
+scaler:
+  type: standard
+
+graph:
+  type: two_body
+  nodes: [body_1, body_2]
+  edge_type: undirected
+  coordinate_type: physical

@@ -1,0 +1,20 @@
+dataset: sirs
+
+window:
+  length: 128
+  stride: 32
+
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+  seed: 42
+
+scaler:
+  type: standard
+
+graph:
+  type: sirs
+  nodes: [S, I, R]
+  edge_type: directed_cycle
+  coordinate_type: compartment_index

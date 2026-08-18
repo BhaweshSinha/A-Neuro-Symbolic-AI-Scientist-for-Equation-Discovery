@@ -1,0 +1,41 @@
+phase: P2
+
+input:
+  root: data/raw/p1
+
+output:
+  root: results/p2
+  validation: data/interim/p2/validation
+
+datasets:
+  - two_body
+  - lorenz
+  - double_pendulum
+  - lotka_volterra
+  - sis
+  - sirs
+
+analysis:
+  correlation_method: pearson
+  autocorrelation_max_lag: 100
+
+  distribution:
+    bins: 50
+
+  phase_space:
+    max_trajectories: 10
+
+  plotting:
+    dpi: 150
+    format: png
+
+validation:
+  allow_missing: false
+  allow_nan: false
+  allow_inf: false
+
+expected:
+  trajectories_per_system: 10
+  total_trajectories: 60
+  time_points_per_trajectory: 2001
+  dt: 0.01

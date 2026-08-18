@@ -1,0 +1,20 @@
+dataset: lotka_volterra
+
+window:
+  length: 128
+  stride: 32
+
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+  seed: 42
+
+scaler:
+  type: standard
+
+graph:
+  type: lotka_volterra
+  nodes: [prey, predator]
+  edge_type: undirected
+  coordinate_type: log_population
