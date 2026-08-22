@@ -1,6 +1,6 @@
 #  Neuro-Symbolic AI Scientist for Equation Discovery
 
- modular neuro-symbolic framework for automated scientific equation discovery that integrates Graph Transformers, EGNNs, GATs, FNOs, DeepONets, causal discovery, LLM-guided symbolic regression, and physics-aware verification to uncover interpretable scientific laws from data.
+A modular neuro-symbolic framework for automated scientific equation discovery that integrates Graph Transformers, EGNNs, GATs, FNOs, DeepONets, causal discovery, LLM-guided symbolic regression, and physics-aware verification to uncover interpretable scientific laws from data.
 
 ---
 
